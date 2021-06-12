@@ -30,9 +30,9 @@ let cookiesArr = [], cookie = '', jdPetShareArr = [], isBox = false, notify, new
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
    //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTAxODc2NTEzNTAwMDAwMDAwMjg3MDg332M245A==@MTAxODc2NTEz33MzAwMDAw555MDAyNzUwMDA4MQ==@MTAxODc233NTE555zMjAwMDAwMDAzMDI3MTMyOQ==@MTAxODc2NTEz44NDAwMDAwMDAz555MDI2MDI4MQ==@MT555AxODcxOTI2NTAwMDAwMDAxOTQ344MjkzMw==',
+  'MTAxODc2NTEzMDAwMDAwMDAwMDAwMTkxNw==@MTAxODcxMjg4ODAwMDAwMDAwMDAwNzM4NQ==@MTAxODc2NTEzMTAwMDAwMDAzMDY1ODg4MQ==@MTAxODc2NTEzMDAwMDAwMDAwMDAxMzQ3Nw==',
   //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'MTAxODc2NTEzMjAwMD55544AwMDAzMDI3MTMyOQ==@MTAxODcxOTI244NTAw555MDAwMDAyNjA4ODQyMQ==@MTAxODc2NTEzOTAwM444DAwM555DAyNzE2MDY2NQ==',
+  'MTAxODc2NTEzMDAwMDAwMDAwMDAwMTkxNw==@MTAxODcxMjg4ODAwMDAwMDAwMDAwNzM4NQ==@MTAxODc2NTEzMTAwMDAwMDAzMDY1ODg4MQ==@MTAxODc2NTEzMDAwMDAwMDAwMDAxMzQ3Nw==',
 ]
 let message = '', subTitle = '', option = {};
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
@@ -420,7 +420,7 @@ async function showMsg() {
 }
 function readShareCode() {
   return new Promise(resolve => {
-    $.get({url: `http://api.turingls/api/v1/jd/pet/read/${randomCount}/`}, (err, resp, data) => {
+    $.get({url: ``}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
