@@ -31,7 +31,7 @@ jobs:
       - name: '运行 【wangwang】'
         run: |
           cd ~/scripts
-          node jd_pet.js
+          node jd_fruit.js
         env:
           PET_NOTIFY_CONTROL: ${{ secrets.PET_NOTIFY_CONTROL }}
           PETSHARECODES: ${{ secrets.PETSHARECODES }}
